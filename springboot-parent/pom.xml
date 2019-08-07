@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
@@ -16,17 +17,37 @@
   
   <modules>
       <module>spring-cloud-service</module>
+      <module>spring-eureka-first</module>
+	  <module>spring-eureka-second</module>
+   	  <module>spring-service</module>
+   	  <module>spring-dao</module>
   </modules>
  
+ <properties>
+    <mybatis-spring-boot-starter.version>2.0.1</mybatis-spring-boot-starter.version>
+  </properties>
+ 
+ <!-- 只是管理版本  依赖不会注入到子项目中   -->
  <dependencyManagement>
 		<dependencies>
+			<!-- spring-dao中加入依赖 -->
+			<dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+		
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>Finchley.SR2</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>
+			</dependency>			
 		</dependencies>
-	</dependencyManagement>
+  </dependencyManagement>
+  
+  
+  
+  
 </project>

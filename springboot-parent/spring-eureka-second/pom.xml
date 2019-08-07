@@ -8,9 +8,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<artifactId>spring-eureka-first</artifactId>
-	<name>spring-eureka-first</name>
-	<description>Demo project for Spring Boot</description>
+	<artifactId>spring-eureka-second</artifactId>
+	<name>spring-eureka-second</name>
+	<description>eureka second service test</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -22,7 +22,7 @@
 		   <artifactId>spring-service</artifactId>
 		   <version>0.0.1-SNAPSHOT</version>
 		</dependency>
-	
+		
 		<dependency>
 		   <groupId>com.spring.parent</groupId>
 		   <artifactId>spring-dao</artifactId>
