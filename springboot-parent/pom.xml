@@ -21,6 +21,7 @@
 	  <module>spring-eureka-second</module>
    	  <module>spring-service</module>
    	  <module>spring-dao</module>
+  	  <module>spring-entity</module>
   </modules>
  
  <properties>

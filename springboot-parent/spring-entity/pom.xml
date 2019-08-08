@@ -7,31 +7,13 @@
     <artifactId>springboot-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-dao</artifactId>
-  <name>spring-dao</name>
+  <artifactId>spring-entity</artifactId>
+  <name>spring-entity</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-  	<dependency>
-	    <groupId>com.spring.parent</groupId>
-		<artifactId>spring-entity</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
-  
-  	<!-- mybatis依赖 -->
-    <dependency>
-        <groupId>org.mybatis.spring.boot</groupId>
-        <artifactId>mybatis-spring-boot-starter</artifactId>
-    </dependency>
-  
-    <!-- Mysql驱动包 -->
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-    </dependency>
-    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
