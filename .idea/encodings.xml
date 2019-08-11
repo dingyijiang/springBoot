@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/springboot-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-parent/spring-cloud-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-parent/spring-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-parent/spring-entity" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-parent/spring-eureka-first" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-parent/spring-eureka-second" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-parent/spring-service" charset="UTF-8" />
+  </component>
+</project>

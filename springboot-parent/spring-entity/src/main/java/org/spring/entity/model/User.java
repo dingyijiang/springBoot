@@ -4,7 +4,9 @@ public class User {
 	private int id;
 	private String name;
 	private int age;
-	private int teacher;//1 男 2女
+
+
+	private int sex;//1 男 2女
 	public int getId() {
 		return id;
 	}
@@ -23,13 +25,11 @@ public class User {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public int getTeacher() {
-		return teacher;
+	public int getSex() {
+		return sex;
 	}
-	public void setTeacher(int teacher) {
-		this.teacher = teacher;
+	public void setSex(int sex) {
+		this.sex = sex;
 	}
-	
-	
-	
+
 }
