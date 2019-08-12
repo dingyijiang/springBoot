@@ -1,12 +1,13 @@
 package com.spring.parent.controller;
 
-import org.spring.entity.model.User;
-import org.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.parent.entity.model.User;
+import com.spring.parent.service.UserService;
 
 @RestController
 @RequestMapping("/user/test")
