@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.spring.parent</groupId>
+		<artifactId>springboot-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<artifactId>spring-thymeleaf</artifactId>
+	<name>spring-thymeleaf</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		
+		 <!-- SpringBoot集成thymeleaf模板 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        
+         <!-- spring-boot-devtools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional> <!-- 表示依赖不会传递 -->
+		</dependency>
+		
+		<dependency>
+		   <groupId>com.spring.parent</groupId>
+		   <artifactId>spring-service</artifactId>
+		   <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	
+		<dependency>
+		   <groupId>com.spring.parent</groupId>
+		   <artifactId>spring-dao</artifactId>
+		   <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+		   <groupId>com.spring.parent</groupId>
+		   <artifactId>spring-entity</artifactId>
+		   <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- web的场景，自动帮我们引入了web模块开发需要的相关jar包  -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		
+   		<dependency>
+     		 <groupId>org.seleniumhq.selenium</groupId>
+      		 <artifactId>selenium-java</artifactId>
+     		 <version>3.4.0</version>
+  	     </dependency>
+  		 <dependency>
+      		<groupId>com.google.guava</groupId>
+      		<artifactId>guava</artifactId>
+      		<version>23.0</version>
+   		</dependency>
+   		<dependency>
+      		<groupId>com.google.code.gson</groupId>
+      		<artifactId>gson</artifactId>
+      		<version>2.8.2</version>
+   		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
