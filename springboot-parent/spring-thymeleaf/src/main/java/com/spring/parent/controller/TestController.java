@@ -1,5 +1,8 @@
 package com.spring.parent.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TestController {
 	
 	public static void main(String[] args) {
@@ -19,7 +22,8 @@ public class TestController {
 
 		System.out.println(e==f);
 		System.out.println(e==g);
-
+		Map map=new HashMap();
+		map.put("test", "dyj");
 	}
 
 }

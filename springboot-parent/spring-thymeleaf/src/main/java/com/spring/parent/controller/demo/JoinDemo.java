@@ -5,7 +5,7 @@ package com.spring.parent.controller.demo;
  * @author Administrator
  *
  */
-public class Stu1JoinDemo {
+public class JoinDemo {
 	public static void main(String[] args) {
 		try {
 			ThreadA t1=new ThreadA("t1");
@@ -28,8 +28,12 @@ public class Stu1JoinDemo {
         System.out.printf("%s start\n", this.getName()); 
 
         // 延时操作
-        for(int i=0; i <1000000; i++)
-           ;
+        try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
         System.out.printf("%s finish\n", this.getName()); 
     } 

@@ -11,14 +11,14 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import junit.framework.Assert;
 
 public class JsBank {
-	public static void main(String[] args) throws AWTException {
+	public static void main(String[] args) throws AWTException, InterruptedException {
 		testLogin();
 	}
 
@@ -131,54 +131,59 @@ public class JsBank {
 		ieDriver.findElement(By.tagName("body")).getText();
 		ieDriver.findElement(By.linkText("未出账单查询")).click();
 	}
+	
 
-	private static void testLogin() throws AWTException {
+
+	private static void testLogin() throws AWTException, InterruptedException {
 		//设置浏览器驱动
-		File file_ie = new File("D:\\\\code\\\\pachong\\\\IEDriverServer.exe");
-		System.setProperty( "webdriver.ie.driver", file_ie.getAbsolutePath());
-		//设置浏览器参数
-		DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-		caps.setCapability("ignoreZoomSetting", true);
-		caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-//		caps.setCapability("initialBrowserUrl","https://www.baidu.com/");
-		caps.setCapability("initialBrowserUrl","https://ibsbjstar.ccb.com.cn/CCBIS/V6/common/login.jsp");
-		WebDriver ieDriver = new InternetExplorerDriver(caps);
-		//登录
+		//设置浏览器驱动
+		File file_ie = new File("D:\\code\\pachong\\IEDriverServer.exe");
+		  System.setProperty( "webdriver.ie.driver", file_ie.getAbsolutePath());
+		  //设置浏览器参数
+		  DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+		  caps.setCapability("ignoreZoomSetting", true);
+		  caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+		//  caps.setCapability("initialBrowserUrl","https://www.baidu.com/");
+		  caps.setCapability("initialBrowserUrl","https://ibsbjstar.ccb.com.cn/CCBIS/V6/common/login.jsp");
+		  WebDriver ieDriver = new InternetExplorerDriver(new InternetExplorerOptions(caps));
+		  //登录
+		  Robot robot = new Robot();
+		  System.out.println("---start---");
+		  Thread.sleep(10000);
+		  WebElement fQRLGIN = ieDriver.findElement(By.id("fQRLGIN"));
+		  System.out.println("---find iframe---");
 
+		  ieDriver.switchTo().frame(fQRLGIN);
+		  WebElement goPassWordLogin = ieDriver.findElement(By.id("USERID"));
+		  goPassWordLogin.click();
+		 
+		//  //获取页面信息
+		//  ieDriver.findElement(By.id("imgCreditCard")).click();
+		//  ieDriver.findElement(By.linkText("已出账单查询")).click();
+		//  System.out.println(ieDriver.getPageSource());
+		//  ieDriver.findElement(By.linkText("未出账单查询")).click();
+		//  System.out.println(ieDriver.getPageSource());
 
-//		//获取页面信息
-//		ieDriver.findElement(By.id("imgCreditCard")).click();
-//		ieDriver.findElement(By.linkText("已出账单查询")).click();
-//		System.out.println(ieDriver.getPageSource());
-//		ieDriver.findElement(By.linkText("未出账单查询")).click();
-//		System.out.println(ieDriver.getPageSource());
-						
-		Robot robot = new Robot();
-		//robot.setAutoDelay(1000);
-//			robot.mouseMove(100, 100);
-		ieDriver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		WebElement search_box = ieDriver.findElement(By.id("LOGPASS_SHOW"));
-		search_box.click();
-		
-		robot.keyPress(KeyEvent.VK_A);
-		robot.keyRelease(KeyEvent.VK_A);
-//		robot.mouseMove(850, 545);
-//		System.out.println("单击");
-//		robot.mousePress(InputEvent.BUTTON1_MASK);
-//		robot.mouseRelease(InputEvent.BUTTON1_MASK);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
+		  //Robot robot = new Robot();
+		  robot.setAutoDelay(1000);
+		//  robot.mouseMove(100, 100);
 
-		System.out.println("输入b");
-		robot.keyPress(KeyEvent.VK_B);
-		robot.keyRelease(KeyEvent.VK_B);
-//
-		//选择信用卡
-		WebElement search_button = ieDriver.findElement(By.id("btnLogin"));
-		search_button.click();
-		
+		  robot.keyPress(KeyEvent.VK_A);
+		  robot.keyRelease(KeyEvent.VK_A);
+		//  robot.mouseMove(850, 545);
+		//  System.out.println("单击");
+		//  robot.mousePress(InputEvent.BUTTON1_MASK);
+		//  robot.mouseRelease(InputEvent.BUTTON1_MASK);
+		  robot.keyPress(KeyEvent.VK_TAB);
+		  robot.keyRelease(KeyEvent.VK_TAB);
+
+		  System.out.println("输入b");
+		  robot.keyPress(KeyEvent.VK_B);
+		  robot.keyRelease(KeyEvent.VK_B);
+		//
+		  //选择信用卡
+		  WebElement search_button = ieDriver.findElement(By.id("loginButton"));
+		  search_button.click();
 		
 	}
 	
@@ -195,7 +200,7 @@ public class JsBank {
 	                 }
 	             });
 	         } catch (TimeoutException e) {
-	             Assert.fail("超时!! " + timeOut + " 秒之后还没找到元素 [" + By + "]");
+	         //    Assert.fail("超时!! " + timeOut + " 秒之后还没找到元素 [" + By + "]");
 	         }
 	     }
 
