@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springboot-parent/spring-cloud-service/spring-cloud-service.iml" filepath="$PROJECT_DIR$/springboot-parent/spring-cloud-service/spring-cloud-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-parent/spring-dao/spring-dao.iml" filepath="$PROJECT_DIR$/springboot-parent/spring-dao/spring-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-parent/spring-entity/spring-entity.iml" filepath="$PROJECT_DIR$/springboot-parent/spring-entity/spring-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-parent/spring-eureka-first/spring-eureka-first.iml" filepath="$PROJECT_DIR$/springboot-parent/spring-eureka-first/spring-eureka-first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-parent/spring-eureka-second/spring-eureka-second.iml" filepath="$PROJECT_DIR$/springboot-parent/spring-eureka-second/spring-eureka-second.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-parent/spring-service/spring-service.iml" filepath="$PROJECT_DIR$/springboot-parent/spring-service/spring-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springboot-git.iml" filepath="$PROJECT_DIR$/.idea/springboot-git.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-parent/springboot-parent.iml" filepath="$PROJECT_DIR$/springboot-parent/springboot-parent.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,4 +1,4 @@
-package com.spring.parent.entity.model;
+package org.spring.entity.model;
 
 public class User {
 	private int id;
@@ -23,7 +23,7 @@ public class User {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getTeacher() {
+	public int getTeacher() {
 		return teacher;
 	}
 	public void setTeacher(String teacher) {
