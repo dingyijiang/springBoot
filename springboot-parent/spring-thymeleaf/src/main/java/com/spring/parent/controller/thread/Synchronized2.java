@@ -47,8 +47,7 @@ public class Synchronized2 {
 }
 
 class Test{
-	public void synMethod() {
-		synchronized (this) {
+	public synchronized void synMethod() {
 			try {
 				for(int i=0;i<10;i++) {
 					Thread.sleep(500);
@@ -57,11 +56,9 @@ class Test{
 			}catch (InterruptedException e) {
 			}
 			
-		}
-	}
+	}	
 	
-	public void noSynMethod() {
-		synchronized (this) {
+	public synchronized void noSynMethod() {
 			try {
 				for(int i=0;i<10;i++) {
 					Thread.sleep(500);
@@ -69,7 +66,6 @@ class Test{
 				}
 			}catch (InterruptedException e) {
 			}
-		}
 	}
 	
 }

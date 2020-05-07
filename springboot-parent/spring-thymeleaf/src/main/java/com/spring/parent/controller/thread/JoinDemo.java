@@ -1,6 +1,6 @@
 package com.spring.parent.controller.thread;
 /**
- * join() Thread.java中   
+ * join() Thread.java中     t1.join() 即为t1线程执行完毕之后才会执行后面的主线程代码
  * 作用: 让“主线程”等待“子线程”结束之后才能继续运行
  * @author Administrator
  *
@@ -10,7 +10,8 @@ public class JoinDemo {
 		try {
 			ThreadA t1=new ThreadA("t1");
 			t1.start();
-			t1.join();
+			t1.join();//等待t1线程死亡    
+			t1.join(10);//等待10s 就开始执行下面代码。
 			System.out.printf("%s finish\n", Thread.currentThread().getName()); 
 		}catch (InterruptedException e) {
             e.printStackTrace();

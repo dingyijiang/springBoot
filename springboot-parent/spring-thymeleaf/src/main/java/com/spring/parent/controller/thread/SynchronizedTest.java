@@ -37,8 +37,8 @@ class AccountingSyncClass implements Runnable {
 	@Override
 	public void run() {
 		for (int j = 0; j < 100; j++) {
-//			increase();
-			increase2();
+			increase();
+//			increase2();
 		}
 	}
 }

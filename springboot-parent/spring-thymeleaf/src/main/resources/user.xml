@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="user1" class="com.spring.parent.controller.reflect.entity.UserEntity">
+		<property name="id" value="0001"></property>
+		<property name="name" value="余胜军"></property>
+	</bean>
+	<bean id="user2" class="com.spring.parent.controller.reflect.entity.UserEntity">
+		<property name="id" value="0002"></property>
+		<property name="name" value="张三"></property>
+	</bean>
+</beans>
